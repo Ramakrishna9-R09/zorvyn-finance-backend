@@ -12,7 +12,7 @@ mvn spring-boot:run
 - Password: `admin123`
 
 ## Useful URLs
-- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
 - H2 Console: `http://localhost:8080/h2-console`
 - Health: `http://localhost:8080/actuator/health`
 

@@ -92,7 +92,7 @@ If Maven is not installed globally, the project can still be built with any loca
 
 ### App URLs
 - API base: `http://localhost:8080`
-- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
 - OpenAPI JSON: `http://localhost:8080/v3/api-docs`
 - H2 Console: `http://localhost:8080/h2-console`
 - Health: `http://localhost:8080/actuator/health`

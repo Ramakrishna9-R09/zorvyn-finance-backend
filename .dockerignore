@@ -1,0 +1,6 @@
+.git
+.github
+.m2repo
+.vscode
+target
+*.log

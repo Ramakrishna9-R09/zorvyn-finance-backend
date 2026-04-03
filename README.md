@@ -23,6 +23,7 @@ This project covers the assignment requirements through a Spring Boot REST API w
 - Spring Security
 - Spring Data JPA
 - H2 Database
+- PostgreSQL
 - JWT (`jjwt`)
 - Swagger / OpenAPI
 - JUnit 5 + MockMvc
@@ -90,6 +91,8 @@ mvn spring-boot:run
 
 If Maven is not installed globally, the project can still be built with any local Maven installation by pointing to it explicitly.
 
+Local development runs with the default `h2` profile. For PostgreSQL-based deployment, start the app with the `postgres` profile and provide `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD`.
+
 ### App URLs
 - API base: `http://localhost:8080`
 - Swagger UI: `http://localhost:8080/swagger-ui/index.html`
@@ -105,6 +108,19 @@ If Maven is not installed globally, the project can still be built with any loca
 
 ### Sample Records
 The application seeds roles, one admin user, and sample income/expense records on startup.
+
+## PostgreSQL Deployment
+
+Use the `postgres` profile for deployment:
+
+```bash
+SPRING_PROFILES_ACTIVE=postgres
+DB_URL=jdbc:postgresql://<host>:5432/<database>
+DB_USERNAME=<username>
+DB_PASSWORD=<password>
+```
+
+When the application starts, it seeds roles, the default admin user, and sample financial records if the database is empty.
 
 ## Example Requests
 
@@ -137,6 +153,7 @@ curl "http://localhost:8080/api/financial-records?type=EXPENSE&category=RENT" ^
 
 ## Design Decisions
 - H2 was chosen for friction-free evaluation and easy local setup
+- PostgreSQL support was added for deployment and persistent hosted environments
 - JWT keeps the API stateless and demonstrates production-style auth flow
 - DTOs separate request/response contracts from JPA entities
 - Method-level security expresses role rules clearly and close to endpoints

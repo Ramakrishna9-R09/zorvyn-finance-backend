@@ -16,6 +16,9 @@ mvn spring-boot:run
 - H2 Console: `http://localhost:8080/h2-console`
 - Health: `http://localhost:8080/actuator/health`
 
+## PostgreSQL Mode
+Set `SPRING_PROFILES_ACTIVE=postgres` and provide `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` before starting the app if you want to run it against PostgreSQL.
+
 ## Main Endpoints
 - `POST /api/auth/login`
 - `POST /api/auth/register`

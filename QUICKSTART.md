@@ -12,9 +12,14 @@ mvn spring-boot:run
 - Password: `admin123`
 
 ## Useful URLs
-- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
+- Swagger UI: `http://localhost:8080/docs`
 - H2 Console: `http://localhost:8080/h2-console`
 - Health: `http://localhost:8080/actuator/health`
+
+## Live Deployment
+- Base URL: `https://zorvyn-finance-backend-p8lc.onrender.com`
+- Swagger UI: `https://zorvyn-finance-backend-p8lc.onrender.com/docs`
+- Health: `https://zorvyn-finance-backend-p8lc.onrender.com/actuator/health`
 
 ## PostgreSQL Mode
 Set `SPRING_PROFILES_ACTIVE=postgres` and provide `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` before starting the app if you want to run it against PostgreSQL.

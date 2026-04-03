@@ -95,7 +95,7 @@ Local development runs with the default `h2` profile. For PostgreSQL-based deplo
 
 ### App URLs
 - API base: `http://localhost:8080`
-- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
+- Swagger UI: `http://localhost:8080/docs`
 - OpenAPI JSON: `http://localhost:8080/v3/api-docs`
 - H2 Console: `http://localhost:8080/h2-console`
 - Health: `http://localhost:8080/actuator/health`
@@ -121,6 +121,13 @@ DB_PASSWORD=<password>
 ```
 
 When the application starts, it seeds roles, the default admin user, and sample financial records if the database is empty.
+
+### Live Deployment
+- Base URL: `https://zorvyn-finance-backend-p8lc.onrender.com`
+- Swagger UI: `https://zorvyn-finance-backend-p8lc.onrender.com/docs`
+- Health: `https://zorvyn-finance-backend-p8lc.onrender.com/actuator/health`
+
+Note: Render free tier may take a short time to wake up after inactivity.
 
 ## Example Requests
 
@@ -185,4 +192,4 @@ Generated artifact:
 - Record ownership rules
 - Export APIs
 - TestContainers-based integration testing
-- PostgreSQL profile for deployment realism
+- Richer search and reporting options
